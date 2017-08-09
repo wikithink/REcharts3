@@ -275,7 +275,8 @@ setLayer = function(dataList, type = 'bar',
     p@formatFunction_tooltip = 'function(params){return params.name + \':<br>\' + params.seriesName + \' : \' + params.data.label}'
   } else if(type == 'pie'){
     p@formatFunction_label = '\\"{b}: {c} ({d}%)\\"'
-    p@formatFunction_tooltip = '\\"{a} <br/>{b}: {c} ({d}%)\\"'
+    # p@formatFunction_tooltip = '\\"{a} <br/>{b}: {c} ({d}%)\\"'
+    p@formatFunction_tooltip = '\\"{b}: {c} ({d}%)\\"'
   } else if(type %in% c('scatter', 'lines')){
     p@formatFunction_label = 'function(params){return params.data.label}'
     p@formatFunction_tooltip = 'function(params){return params.seriesName + \' : \' + params.data.label}'
